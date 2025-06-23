@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Instant Access - InfoPro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-img">IP</div>
+                    InfoPro
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="affiliate.html">Affiliates</a></li>
+                        <li><a href="faq-page.html">FAQ</a></li>
+                        <li><a href="reader-challenge-page.html">Challenge</a></li>
+                        <li><a href="lead-magnet-giveaway-page.html">Free Gift</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Get Instant Access</h1>
+                <p>Enter your details below to unlock your digital blueprint and start transforming your business today</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="product-showcase">
+                    <div class="product-image">
+                        <img src="image-1.jpg" height="500" width="400" alt="Digital Blueprint">
+                    </div>
+                    <div class="product-info">
+                        <h2>Almost There!</h2>
+                        <p>You're just one step away from accessing the complete business transformation blueprint that has helped over 10,000 entrepreneurs succeed.</p>
+                        
+                        <h3>What happens next:</h3>                        <ul class="product-features">
+                            <li>Instant download access</li>
+                            <li>Welcome email with login details</li>
+                            <li>Exclusive bonus materials</li>
+                            <li>VIP community invitation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <h3 style="text-align: center; margin-bottom: 2rem; color: #ff6b35;">Secure Your Access Now</h3>                    <form id="optinForm">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        
+                        <div style="text-align: center;">
+                            <button type="submit" class="btn" style="width: 100%; font-size: 1.2rem;">
+                                Get Instant Access - $97
+                            </button>
+                        </div>
+                        
+                        <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                            🔒 Secure checkout - Your information is protected
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>What Our Customers Say</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div style="color: #ff6b35; font-size: 1.5rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+                        <p>"The best investment I've made for my business. The strategies are clear, actionable, and they work!"</p>
+                        <strong style="color: #ff6b35;">- Amanda K.</strong>
+                    </div>
+                    <div class="feature-card">
+                        <div style="color: #ff6b35; font-size: 1.5rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+                        <p>"I doubled my revenue in 2 months using these exact methods. Worth every penny and more."</p>
+                        <strong style="color: #ff6b35;">- David R.</strong>
+                    </div>
+                    <div class="feature-card">
+                        <div style="color: #ff6b35; font-size: 1.5rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+                        <p>"Finally, a guide that delivers on its promises. Easy to follow and incredibly effective."</p>
+                        <strong style="color: #ff6b35;">- Lisa M.</strong>
+                    </div>
+                </div>
+            </div>
+        </section>        <section class="section highlight-section">
+            <div class="container text-center">
+                <h2>30-Day Money-Back Guarantee</h2>
+                <p class="text-large mb-xl">Try the blueprint risk-free. If you're not completely satisfied, get a full refund within 30 days.</p>
+                <div style="display: flex; justify-content: center; align-items: center; gap: var(--space-xl); flex-wrap: wrap;">
+                    <div>🔒 Secure Payment</div>
+                    <div>💯 100% Satisfaction</div>
+                    <div>⚡ Instant Access</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 InfoPro. All rights reserved. | <a href="faq-page.html" style="color: #ff6b35;">FAQ</a> | <a href="affiliate.html" style="color: #ff6b35;">Affiliate Program</a></p>
+        </div>
+    </footer>    <script>
+        // Enhanced form validation and redirect
+        document.getElementById('optinForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+            
+            const firstName = document.getElementById('firstName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            
+            // Validation
+            if (!firstName || !email) {
+                alert('Please fill in all required fields.');
+                return false;
+            }
+            
+            if (!email.includes('@') || !email.includes('.')) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+            
+            // Store user data in localStorage (optional - for personalization)
+            localStorage.setItem('userFirstName', firstName);
+            localStorage.setItem('userEmail', email);
+            
+            // Show loading state
+            const submitBtn = document.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Processing...';
+            submitBtn.disabled = true;
+            
+            // Simulate processing time and redirect
+            setTimeout(() => {
+                window.location.href = 'thank-you.html';
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
